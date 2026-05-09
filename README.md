@@ -1,4 +1,4 @@
-# Cynox S02 CTF 2025
+# Cynox S03 CTF 2026
 
 ## Event Description
 
@@ -8,6 +8,7 @@
 
 ## Challenges
 
+- [Welcome To Cynox !!!](./C00/C00.md) - 0 pts
 - [JARVIS Knows Best](./C01/C01.md) - 100 pts
 - [Hydra's Whisper](./C02/C02.md) - 100 pts
 - [Signals from Asgard](./C03/C03.md) - 100 pts
@@ -17,6 +18,12 @@
 - [Pym's Pocket](./C07/C07.md) - 100 pts
 - [Red Skull's Communiqué](./C08/C08.md) - 100 pts
 - [The God of Mischief's Message](./C09/C09.md) - 100 pts
+- [JARVIS in the Silence](./C10/C10.md) - 100 pts
+- [Stark Upload](./C11/C11.md) - 200 pts
+- [Fury's Back Door](./C12/C12.md) - 200 pts
+- [Vision's Fragment](./C13/C13.md) - 200 pts
+- [Agent Carter's Dossier](./C14/C14.md) - 200 pts
+- [Helicarrier Traffic](./C15/C15.md) - 200 pts
+- [Ultron's Database](./C16/C16.md) - 200 pts
 
 ## Final Scoreboard
-
