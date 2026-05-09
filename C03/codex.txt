@@ -1,0 +1,38 @@
+=============================================
+  STARK INDUSTRIES — CLASSIFIED DOCUMENT
+  Asgardian Signal Codex v1.0
+  Recovered from Thor's comms device
+=============================================
+
+NOTE: Asgardian communications use a modified
+signal alphabet. Standard decoders WILL fail.
+
+--- LETTER TABLE ---
+A : -         N : --.
+B : ..-        O : ....
+C : ...-       P : ..
+D : .--        Q : .---
+E : -..-       R : -.-
+F : -.--       S : .-..
+G : --..       T : --
+H : .-         U : -.
+I : -...       V : ---
+J : -.-.       W : .--.
+K : -..        X : --.-
+L : .          Y : .-.
+M : ..-.       Z : ...
+
+--- DIGIT TABLE ---
+0 : ...--      5 : --...  (NOT standard)
+1 : ....-      6 : ---..
+2 : .....      7 : ----.
+3 : -....      8 : -----
+4 : --...      9 : .----
+
+--- SPECIAL ---
+_ (separator) : ..--..
+
+--- SEPARATOR ---
+Each character is separated by |
+
+=============================================
