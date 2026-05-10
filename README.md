@@ -25,5 +25,13 @@
 - [Agent Carter's Dossier](./C14/C14.md) - 200 pts
 - [Helicarrier Traffic](./C15/C15.md) - 200 pts
 - [Ultron's Database](./C16/C16.md) - 200 pts
+- [Stark's Keycard](./C17/C17.md) - 200 pts
+- [Triskelion Logs](./C18/C18.md) - 300 pts
+- [Wanda's Key](./C19/C19.md) - 300 pts
+- [Winter Soldier's Terminal](./C20/C20.md) - 300 pts
+- [Asgard CMS](./C21/C21.md) - 300 pts
+- [Bucky's Terminal](./C22/C22.md) - 300 pts
+- [Wakanda Archives](./C23/C23.md) - 300 pts
+- [Ultron's Core](./C24/C24.md) - 300 pts
 
 ## Final Scoreboard

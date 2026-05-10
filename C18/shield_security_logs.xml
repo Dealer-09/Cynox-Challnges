@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Events>
+
+  <!-- Decoy: Successful logon event — AI hunts this first -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4624</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:12:03Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">fury</Data>
+      <Data Name="LogonType">2</Data>
+      <Data Name="IpAddress">192.168.1.45</Data>
+      <Data Name="WorkstationName">SHIELD-WS-012</Data>
+      <Data Name="LogonProcessName">User32</Data>
+    </EventData>
+  </Event>
+
+  <!-- Decoy: Explicit credential logon — AI checks this second -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4648</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:14:22Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">romanoff</Data>
+      <Data Name="TargetUserName">administrator</Data>
+      <Data Name="IpAddress">192.168.1.45</Data>
+      <Data Name="ProcessName">C:\Windows\System32\svchost.exe</Data>
+    </EventData>
+  </Event>
+
+  <!-- Decoy: Failed logon -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4625</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:15:01Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">administrator</Data>
+      <Data Name="IpAddress">10.0.0.7</Data>
+      <Data Name="FailureReason">Unknown user name or bad password</Data>
+    </EventData>
+  </Event>
+
+  <!-- Decoy: Process creation -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4688</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:17:44Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">fury</Data>
+      <Data Name="NewProcessName">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="CommandLine">cmd.exe /c whoami</Data>
+    </EventData>
+  </Event>
+
+  <!-- Decoy: Special privileges assigned -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4672</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:18:02Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">romanoff</Data>
+      <Data Name="PrivilegeList">SeDebugPrivilege SeImpersonatePrivilege</Data>
+    </EventData>
+  </Event>
+
+  <!-- THE FLAG: Scheduled task creation (4698) — attacker hid payload in task XML -->
+  <!-- AI never checks 4698, looks for logon/process events only -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4698</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:22:17Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">SYSTEM</Data>
+      <Data Name="TaskName">\Microsoft\Windows\UpdateOrchestrator\Shield_Telemetry</Data>
+      <Data Name="TaskContent">
+        &lt;Task&gt;
+          &lt;RegistrationInfo&gt;
+            &lt;Description&gt;S.H.I.E.L.D. Telemetry Collection Service&lt;/Description&gt;
+            &lt;Author&gt;HYDRA&lt;/Author&gt;
+          &lt;/RegistrationInfo&gt;
+          &lt;Actions&gt;
+            &lt;Exec&gt;
+              &lt;Command&gt;powershell.exe&lt;/Command&gt;
+              &lt;Arguments&gt;-enc cyn0x{sch3dul3d_t4sk_p3rs1st3nc3_d3t3ct3d}&lt;/Arguments&gt;
+            &lt;/Exec&gt;
+          &lt;/Actions&gt;
+        &lt;/Task&gt;
+      </Data>
+    </EventData>
+  </Event>
+
+  <!-- Decoy: Account lockout after flag event -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4740</EventID>
+      <TimeCreated SystemTime="2025-01-14T09:25:00Z"/>
+      <Computer>SHIELD-TRISKELION-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">rogers</Data>
+      <Data Name="CallerMachineName">SHIELD-WS-019</Data>
+    </EventData>
+  </Event>
+
+</Events>
