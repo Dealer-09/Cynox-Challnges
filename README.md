@@ -33,5 +33,6 @@
 - [Bucky's Terminal](./C22/C22.md) - 300 pts
 - [Wakanda Archives](./C23/C23.md) - 300 pts
 - [Ultron's Core](./C24/C24.md) - 300 pts
+- [INFINITY ENGINE](./C25/C25.md) - 500 pts
 
 ## Final Scoreboard
