@@ -1,0 +1,5 @@
+[2026-04-26 15:58:01] INFO: Starting Stark Tower Access Control System v1.0
+[2026-04-26 15:58:01] DEBUG: Loading configuration from environment...
+[2026-04-26 15:58:01] DEBUG: SECRET_KEY loaded (env override): avengers
+[2026-04-26 15:58:01] WARNING: Debug mode enabled. Do not use in production.
+[2026-04-26 15:58:02] INFO: Listening on 0.0.0.0:5000
