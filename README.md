@@ -2,7 +2,7 @@
 
 ## Event Description
 
-- **Date**: XX-06-2026 (--:-- AM - --:-- PM)
+- **Date**: 18-06-2026 (11:00 AM - 01:30 PM)
 - **Location**: Academy Of Technology, Hoogly, West Bengal, India
 - **Organized by**: [AOT x TechFiesta '26]()
 
@@ -30,9 +30,11 @@
 - [Wanda's Key](./C19/C19.md) - 300 pts
 - [Winter Soldier's Terminal](./C20/C20.md) - 300 pts
 - [Asgard CMS](./C21/C21.md) - 300 pts
-- [Bucky's Terminal](./C22/C22.md) - 300 pts
+- [Zola's Algorithm](./C22/C22.md) - 300 pts
 - [Wakanda Archives](./C23/C23.md) - 300 pts
 - [Ultron's Core](./C24/C24.md) - 300 pts
 - [INFINITY ENGINE](./C25/C25.md) - 500 pts
 
 ## Final Scoreboard
+
+![Final Scoreboard](./Cynox%20S03%20Score.png)
